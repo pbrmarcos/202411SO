@@ -27,7 +27,7 @@ void adicionar_contato(Catalogo *catalogo, char *nome, char *telefone) {
         catalogo->total++;
         printf("Contato adicionado com sucesso!\n");
     } else {
-        printf("Catálogo cheio, não é possível adicionar mais contatos.\n");
+        printf("Catalogo cheio, nao é possivel adicionar mais contatos.\n");
     }
 }
 
@@ -39,7 +39,7 @@ void pesquisar_contato(Catalogo *catalogo, char *nome) {
             return;
         }
     }
-    printf("Contato não encontrado.\n");
+    printf("Contato nao encontrado.\n");
 }
 
 // Função para excluir um contato do catálogo
@@ -50,11 +50,11 @@ void excluir_contato(Catalogo *catalogo, char *nome) {
                 catalogo->contatos[j] = catalogo->contatos[j + 1];
             }
             catalogo->total--;
-            printf("Contato excluído com sucesso!\n");
+            printf("Contato excluido com sucesso!\n");
             return;
         }
     }
-    printf("Contato não encontrado.\n");
+    printf("Contato nao encontrado.\n");
 }
 
 // Função para salvar os contatos em um arquivo
@@ -93,14 +93,14 @@ int main() {
     char telefone[MAX_TELEFONE];
 
     do {
-        printf("\nCatálogo de Contatos\n");
+        printf("\nCatalogo de Contatos\n");
         printf("1. Adicionar Contato\n");
         printf("2. Pesquisar Contato\n");
         printf("3. Excluir Contato\n");
         printf("4. Salvar Contatos\n");
         printf("5. Carregar Contatos\n");
         printf("0. Sair\n");
-        printf("Escolha uma opção: ");
+        printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
         getchar();  // Limpa o buffer de entrada
 
@@ -137,7 +137,7 @@ int main() {
                 printf("Saindo...\n");
                 break;
             default:
-                printf("Opção inválida.\n");
+                printf("Opcao invalida.\n");
                 break;
         }
     } while (opcao != 0);
